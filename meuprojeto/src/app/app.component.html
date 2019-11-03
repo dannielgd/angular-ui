@@ -6,9 +6,8 @@
   <div class="form-group">
     <label for="exampleInputEmail1">Nome</label>
     <input type="text" class="form-control" (input)="alterarNome($event)"
-      value="{{nome}}"
-     id="input" placeholder="Nome">
+	  [value]="nome"  />
   </div>
 
-  <button type="button" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+  <button type="button" class="btn btn-primary" (click)="adicionar()" [disabled]="nome.length == 0">Adicionar</button>
 </div>
