@@ -14,7 +14,13 @@
       "attribute",
       "app",
       "camelCase"
-    ],
+	],
+	"indent": [
+		true,
+		"tabs",
+		4
+	],
+	"eofline": false,
     "component-selector": [
       true,
       "element",
