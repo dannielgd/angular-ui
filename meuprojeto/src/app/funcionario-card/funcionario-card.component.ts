@@ -23,4 +23,8 @@ export class FuncionarioCardComponent {
 		};
 	}
 
+	isAdmin() {
+		return this.funcionario.nome.startsWith('D');
+	}
+
 }
