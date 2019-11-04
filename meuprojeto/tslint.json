@@ -21,7 +21,7 @@
 		4
 	],
 	"eofline": false,
-	no-trailing-whitespace: false,
+	"no-trailing-whitespace": false,
     "component-selector": [
       true,
       "element",
