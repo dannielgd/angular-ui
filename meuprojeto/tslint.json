@@ -14,7 +14,14 @@
       "attribute",
       "app",
       "camelCase"
-    ],
+	],
+	"indent": [
+		true,
+		"tabs",
+		4
+	],
+	"eofline": false,
+	no-trailing-whitespace: false,
     "component-selector": [
       true,
       "element",
@@ -74,7 +81,7 @@
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
-    "no-input-rename": true,
+    "no-input-rename": false,
     "no-inputs-metadata-property": true,
     "no-output-native": true,
     "no-output-on-prefix": true,
