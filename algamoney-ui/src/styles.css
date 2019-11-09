@@ -19,6 +19,9 @@ label {
 .p-col-12 {
 	padding: .5em;
 }
+/*.p-grid {
+	margin-top: auto;
+}*/
 
 .col-valor-header {
     width: 120px;
@@ -33,4 +36,9 @@ label {
 
 .col-data-content {
     text-align: center;
+}
+
+.col-acoes {
+	width: 96px;
+	text-align: center;
 }
