@@ -14,7 +14,8 @@
       "attribute",
       "app",
       "camelCase"
-    ],
+	],
+	"indent": [true, "tabs", 4],
     "component-selector": [
       true,
       "element",
