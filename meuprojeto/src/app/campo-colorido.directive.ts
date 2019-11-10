@@ -3,7 +3,8 @@ import {
     ElementRef,
     Renderer2,
     HostListener,
-	HostBinding
+	HostBinding,
+	Input
 } from '@angular/core';
 
 @Directive({
@@ -11,6 +12,8 @@ import {
     //   selector: 'input'
 })
 export class CampoColoridoDirective {
+
+	@Input('appCampoColorido') cor = 'gray';
 
     @HostBinding('style.backgroundColor') corDeFundo: string;
 
@@ -25,7 +28,7 @@ export class CampoColoridoDirective {
     // }
 
     @HostListener('focus') aoGanharFoco() {
-        this.corDeFundo = 'green';
+        this.corDeFundo = this.cor;
     }
 
     @HostListener('blur') aoPerderFoco() {
