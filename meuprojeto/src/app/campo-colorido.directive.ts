@@ -8,8 +8,9 @@ import {
 } from '@angular/core';
 
 @Directive({
-    selector: '[appCampoColorido]'
-    //   selector: 'input'
+    selector: '[appCampoColorido]',
+	//   selector: 'input',
+	exportAs: 'campoColorido' // exporta a instância da diretiva
 })
 export class CampoColoridoDirective {
 
@@ -27,11 +28,11 @@ export class CampoColoridoDirective {
         //   'background-color', 'yellow');
     // }
 
-    @HostListener('focus') aoGanharFoco() {
+    @HostListener('focus') colorir() {
         this.corDeFundo = this.cor;
     }
 
-    @HostListener('blur') aoPerderFoco() {
+    @HostListener('blur') descolorir() {
 		this.corDeFundo = 'transparent';
     }
 
