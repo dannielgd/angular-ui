@@ -16,7 +16,7 @@
       "camelCase"
 	],
 	"indent": [
-		true,
+		false,
 		"tabs",
 		4
 	],
