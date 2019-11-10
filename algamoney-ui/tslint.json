@@ -16,6 +16,7 @@
       "camelCase"
 	],
 	"indent": [true, "tabs", 4],
+	"no-trailing-whitespace": false,
     "component-selector": [
       true,
       "element",

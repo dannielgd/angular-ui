@@ -1,0 +1,6 @@
+.ativo {
+	color: black;
+}
+.ativo:hover {
+	text-decoration: underline;
+}

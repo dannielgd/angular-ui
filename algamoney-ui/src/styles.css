@@ -39,7 +39,10 @@ label {
     text-align: center;
 }
 
-.col-acoes {
+.col-acoes-header {
 	width: 96px;
+}
+
+.col-acoes {
 	text-align: center;
 }
