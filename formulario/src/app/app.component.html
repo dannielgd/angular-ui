@@ -1,13 +1,14 @@
 <div class="container">
+{{cliente | json}}
 <form #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)" >
   <div class="form-group">
     <label class="form-control-label">Nome</label>
-    <input type="text" class="form-control" name="nome" ngModel>
+    <input type="text" class="form-control" name="primeiroNome" ngModel>
   </div>
 
   <div class="form-group">
     <label class="form-control-label">E-mail</label>
-    <input type="text" class="form-control"  name="email" ngModel>
+    <input type="text" class="form-control"  name="emailAddress" ngModel>
   </div>
 
   <div class="form-group">
