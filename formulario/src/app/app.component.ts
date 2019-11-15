@@ -24,9 +24,9 @@ export class AppComponent {
 	profissao = 'Outra';
 
     salvar(form: NgForm) {
-		this.cliente.nome = form.value.primeiroNome;
-		this.cliente.email = form.value.emailAddress;
-		this.cliente.profissao = form.value.profissao;
+		// this.cliente.nome = form.value.primeiroNome;
+		// this.cliente.email = form.value.emailAddress;
+		// this.cliente.profissao = form.value.profissao;
 
 		console.log(this.cliente);
 
