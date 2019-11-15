@@ -6,20 +6,26 @@
     <form autocomplete="off" #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
         <div class="form-group">
             <label class="form-control-label">Nome</label>
-            <input type="text" class="form-control" name="primeiroNome" [(ngModel)]="cliente.nome" required minlength="10">
+			<input type="text" class="form-control" name="primeiroNome" [(ngModel)]="cliente.nome" required minlength="10" #nome="ngModel">
+
+			<div *ngIf="nome.hasError('required')">Informe um Nome</div>
+			<div *ngIf="nome.hasError('minlength')">O Nome deve ser Completo</div>
         </div>
 
         <div class="form-group">
             <label class="form-control-label">E-mail</label>
-            <input type="text" class="form-control" name="emailAddress" [(ngModel)]="cliente.email" required email>
+			<input type="text" class="form-control" name="emailAddress" [(ngModel)]="cliente.email" email #email="ngModel">
+
+			<div *ngIf="email.invalid">Informe um Email válido</div>
         </div>
 
         <div class="form-group">
             <label class="form-control-label">Profissão</label>
-            <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required>
+            <select class="form-control" name="profissao" [(ngModel)]="cliente.profissao" required #profissao="ngModel">
                 <option value="">Selecione</option>
                 <option *ngFor="let profissao of profissoes" [value]="profissao">{{ profissao }}</option>
-            </select>
+			</select>
+			<div *ngIf="profissao.invalid">Informe uma Profissão</div>
         </div>
 
 		<button type="submit" class="btn btn-primary"
