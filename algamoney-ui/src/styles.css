@@ -9,6 +9,10 @@ label {
 	font-weight: bold;
 }
 
+body .ui-button {
+	margin: 3px;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		width: 1170px;
@@ -17,9 +21,14 @@ label {
 	}
 }
 
+.container {
+	padding: 20px;
+}
+
 .p-col-12 {
 	padding: .5em;
 }
+
 /*.p-grid {
 	margin-top: auto;
 }*/
