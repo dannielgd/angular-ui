@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { ButtonModule } from 'primeng/components/button/button';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
+import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { TableModule } from 'primeng/components/table/table';
