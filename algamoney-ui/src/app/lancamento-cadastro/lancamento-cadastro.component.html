@@ -5,6 +5,10 @@
 				<h1>Novo Lançamento</h1>
 			</div>
 
+			<div class=p-col-12>
+				<p-selectButton [options]="tipos" #tipo></p-selectButton>
+			</div>
+
 			<div class="p-col-6 p-md-3 ui-fluid">
 				<label>Vencimento</label>
 				<p-calendar dateFormat="dd/mm/yy"
@@ -13,7 +17,7 @@
 			</div>
 
 			<div class="p-col-6 p-md-3 ui-fluid">
-				<label>Recebimento</label>
+				<label>{{ tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento' }}</label>
 				<p-calendar dateFormat="dd/mm/yy"></p-calendar>
 			</div>
 
@@ -28,13 +32,13 @@
 			</div>
 
 			<div class="p-col-12 p-md-6 ui-fluid">
-				<label>Categoria</label>
-				<input pInputText type="text">
+				<label>Categoria {{ categoria.value }}</label>
+				<p-dropdown [options]="categorias" placeholder="Selecione" #categoria></p-dropdown>
 			</div>
 
 			<div class="p-col-12 p-md-6 ui-fluid">
-				<label>Pessoa</label>
-				<input pInputText type="text">
+				<label>Pessoa {{ pessoa.value }}</label>
+				<p-dropdown [options]="pessoas" [filter]="true" placeholder="Selecione" #pessoa></p-dropdown>
 			</div>
 
 			<div class="p-col-12 ui-fluid">

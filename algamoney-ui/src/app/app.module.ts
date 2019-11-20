@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { ButtonModule } from 'primeng/components/button/button';
-import { CalendarModule } from 'primeng/calendar';
+import { CalendarModule } from 'primeng/components/calendar/calendar';
+import {SelectButtonModule} from 'primeng/components/selectbutton/selectbutton';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { TableModule } from 'primeng/components/table/table';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
+import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 
 import { AppComponent } from './app.component';
 
@@ -37,7 +39,9 @@ import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.co
 		TableModule,
 		TooltipModule,
 		InputTextareaModule,
-		CalendarModule
+		CalendarModule,
+		SelectButtonModule,
+		DropdownModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
