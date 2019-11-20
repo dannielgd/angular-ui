@@ -22,14 +22,11 @@
 			</div>
 
 			<div class="p-col-12 p-md-9 ui-fluid">
-				<label>Descrição {{ descricao.errors | json }}</label>
+				<label>Descrição</label>
 				<input pInputText type="text" name="descricao"
 					ngModel #descricao="ngModel" required minlength="5">
 
-				<div *ngIf="descricao.hasError('required') && descricao.dirty"
-				class="ui-messages ui-messages-error">
-					Informe uma Descrição
-				</div>
+				<app-message [control]="descricao" error="required" text="Informe uma Descrição"></app-message>
 
 				<div *ngIf="descricao.hasError('minlength') && descricao.dirty"
 				class="ui-messages ui-messages-error">
