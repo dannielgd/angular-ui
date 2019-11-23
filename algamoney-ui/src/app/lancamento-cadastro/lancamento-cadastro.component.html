@@ -1,5 +1,5 @@
 <div class="container">
-	<form>
+	<form #lancamentoForm="ngForm">
 		<div class="p-grid">
 			<div class="p-col-12">
 				<h1>Novo Lançamento</h1>
@@ -13,7 +13,8 @@
 				<label>Vencimento</label>
 				<p-calendar dateFormat="dd/mm/yy"
 					[inline]="false" [readonlyInput]="false"
-					[showIcon]="false"></p-calendar>
+					[showIcon]="false" name="vencimento" ngModel #vencimento="ngModel" required></p-calendar>
+				<app-message [control]="vencimento" error="required" text="Informe um Vencimento"></app-message>
 			</div>
 
 			<div class="p-col-6 p-md-3 ui-fluid">
@@ -33,17 +34,19 @@
 			<div class="p-col-12 p-md-3 ui-fluid">
 				<label>Valor</label>
 				<input pInputText type="text" placeholder="R$ 0,00" name="valor" currencyMask
-					[options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }" ngModel>
+					[options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }" ngModel required>
 			</div>
 
 			<div class="p-col-12 p-md-6 ui-fluid">
 				<label>Categoria</label>
-				<p-dropdown [options]="categorias" placeholder="Selecione" #categoria></p-dropdown>
+				<p-dropdown name="categoria"
+					[options]="categorias" placeholder="Selecione" ngModel required></p-dropdown>
 			</div>
 
 			<div class="p-col-12 p-md-6 ui-fluid">
 				<label>Pessoa</label>
-				<p-dropdown [options]="pessoas" [filter]="true" placeholder="Selecione" #pessoa></p-dropdown>
+				<p-dropdown name="pessoa"
+					[options]="pessoas" [filter]="true" placeholder="Selecione" ngModel required></p-dropdown>
 			</div>
 
 			<div class="p-col-12 ui-fluid">
@@ -52,7 +55,7 @@
 			</div>
 
 			<div class="p-col-12">
-				<button pButton type="submit" label="Salvar"></button>
+				<button pButton type="submit" label="Salvar" [disabled]="lancamentoForm.invalid"></button>
 				<button pButton type="button" label="Novo" class="ui-button-info"></button>
 				<a href="javascript:;">Voltar para a Pesquisa</a>
 			</div>
