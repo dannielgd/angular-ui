@@ -27,11 +27,7 @@
 					ngModel #descricao="ngModel" required minlength="5">
 
 				<app-message [control]="descricao" error="required" text="Informe uma Descrição"></app-message>
-
-				<div *ngIf="descricao.hasError('minlength') && descricao.dirty"
-				class="ui-messages ui-messages-error">
-					Mínimo de {{ descricao.errors.minlength.requiredLength }} Caracteres. Você digitou apenas {{ descricao.errors.minlength.actualLength }}.
-				</div>
+				<app-message [control]="descricao" error="minlength" text="Mínimo de {{ descricao.errors?.minlength?.requiredLength }} Caracteres"></app-message>
 			</div>
 
 			<div class="p-col-12 p-md-3 ui-fluid">
