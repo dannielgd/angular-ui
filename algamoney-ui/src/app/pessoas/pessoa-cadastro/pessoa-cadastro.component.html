@@ -9,7 +9,7 @@
 				<label>Nome</label>
 				<input pInputText type="text" name="nome" ngModel #nome="ngModel" required minlength="5">
 				<app-message [control]="nome" error="required" text="Informe um Nome"></app-message>
-				<app-message [control]="nome" error="minlength" text="Mínimo de {{ nome.errors?.minlength?.requiredLength }} Caracteres"></app-message>
+				<app-message [control]="nome" error="minlength" text="Mínimo de {{ nome?.errors.minlength?.requiredLength }} Caracteres"></app-message>
 			</div>
 
 			<div class="p-col-12 p-md-9 ui-fluid">
