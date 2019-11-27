@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { MessageComponent } from './message/message.component';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoasModule } from './pessoas/pessoas.module';
 
@@ -17,7 +16,6 @@ import { PessoasModule } from './pessoas/pessoas.module';
 		AppComponent,
 		NavbarComponent,
 		CampoColoridoDirective,
-		MessageComponent,
 	],
 	imports: [
 		BrowserModule,
