@@ -11,4 +11,8 @@ export class AppComponent {
 
 	funcionarios = [];
 
+	aoAdicionar(funcionario) {
+		this.funcionarios.push(funcionario);
+	}
+
 }
