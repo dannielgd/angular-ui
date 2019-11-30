@@ -19,3 +19,11 @@ export class FuncionarioService {
 		return this.funcionarios;
     }
 }
+
+export class FuncionarioAbreviadoService extends FuncionarioService {
+
+	adicionar(nome: string) {
+		super.adicionar(nome.substr(0, 3) + '...');
+	}
+
+}
