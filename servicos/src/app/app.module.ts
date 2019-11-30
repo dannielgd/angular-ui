@@ -26,8 +26,7 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
   ],
   providers: [
 	  FuncionarioService,
-	  LogService,
-	  { provide: 'LogPrefixo', useValue: 'LOG2' }
+	  LogService
 	 ],
   bootstrap: [AppComponent]
 })
