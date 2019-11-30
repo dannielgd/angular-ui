@@ -1,5 +1,6 @@
+import { FuncionarioService } from './funcionario.service';
 import {
-	Component
+	Component, OnInit
 } from '@angular/core';
 
 @Component({
@@ -7,8 +8,17 @@ import {
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
 	funcionarios = [];
+	funcionarioService: FuncionarioService;
 
+	constructor() {
+		this.funcionarioService = new FuncionarioService();
+		this.funcionarios = this.funcionarioService.consultar();
+	}
+
+	ngOnInit() {
+
+	}
 }

@@ -11,7 +11,7 @@ export class FuncionarioService {
 		};
 
 		this.funcionarios.push(funcionario);
-		console.log(funcionario);
+		console.log(JSON.stringify(this.funcionarios));
 
 	}
 

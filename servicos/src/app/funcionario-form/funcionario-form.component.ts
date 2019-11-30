@@ -1,3 +1,4 @@
+import { FuncionarioService } from './../funcionario.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,20 +8,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FuncionarioFormComponent{
 
-	ultimoId = 0;
-	nome = 'Danniel';
-	adicionado = false;
-	@Output('criado') funcionarioAdicionado = new EventEmitter();
-	
-	adicionar() {
-		console.log(`Adicionando ${this.nome}`);
-		this.adicionado = true;
+	funcionarioService: FuncionarioService;
 
-		const funcionario = {
-			id: ++this.ultimoId,
-			nome: this.nome
-		};
+	constructor() {
+		this.funcionarioService = new FuncionarioService();
+	}
 
-		this.funcionarioAdicionado.emit(funcionario); //funcionario vai para a variavel $event lá no html
+	adicionar(nome: string) {
+		this.funcionarioService.adicionar(nome);
 	}
 }
