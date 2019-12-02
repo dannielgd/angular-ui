@@ -1,15 +1,19 @@
 {
   "cidades": [
     {
-      "nome": "São Paulo",
+      "nome": "Uberlândia",
+      "id": 1
+    },
+    {
+      "nome": "Florianópolis",
       "id": 2
     },
     {
-      "nome": "Fortaleza",
+      "nome": "Goiânia",
       "id": 3
     },
     {
-      "nome": "Belo Horizonte",
+      "nome": "Curitiba",
       "id": 4
     }
   ]
