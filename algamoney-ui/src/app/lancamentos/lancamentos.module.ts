@@ -16,7 +16,6 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { LancamentosGridComponent } from './lancamentos-grid/lancamentos-grid.component';
 
 
 
@@ -40,8 +39,7 @@ import { LancamentosGridComponent } from './lancamentos-grid/lancamentos-grid.co
   ],
   declarations: [
 	  LancamentoCadastroComponent,
-	  LancamentosPesquisaComponent,
-	  LancamentosGridComponent
+	  LancamentosPesquisaComponent
   ],
   exports: [
 	  LancamentoCadastroComponent,
