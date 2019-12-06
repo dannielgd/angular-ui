@@ -10,6 +10,7 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
 import { CoreModule } from './core/core.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoasModule } from './pessoas/pessoas.module';
+import { LancamentoService } from './lancamentos/lancamento.service';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,7 @@ import { PessoasModule } from './pessoas/pessoas.module';
 		CoreModule,
 		HttpClientModule
 	],
-	providers: [],
+	providers: [LancamentoService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}
