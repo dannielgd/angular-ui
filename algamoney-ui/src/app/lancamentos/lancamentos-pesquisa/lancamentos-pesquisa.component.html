@@ -20,7 +20,6 @@
 				<label>até</label>
 				<p-calendar dateFormat="dd/mm/yy" [inputStyle]="{width: '95px'}"
 					name="vencimentoFim" [(ngModel)]="filtro.dataVencimentoFim"></p-calendar>
-					{{totalRegistros}}
 			</div>
 
 			<div class="p-col-12">
@@ -32,8 +31,8 @@
 	<div class="p-grid">
 		<div class="p-col-12">
 			<p-table [value]="lancamentos" [responsive]="true"
-				[paginator]="true" [rows]="5"
-				[lazy]="true" [totalRecords]="15"
+				[paginator]="true" [rows]="filtro.itensPorPagina"
+				[lazy]="true" [totalRecords]="totalRegistros"
 				(onLazyLoad)="aoMudarPagina($event)">
 				<ng-template pTemplate="header">
 					<tr>

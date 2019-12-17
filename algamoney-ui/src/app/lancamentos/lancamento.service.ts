@@ -46,7 +46,7 @@ export class LancamentoService {
 				const lancamentos = response['content'];
 				const resultado = {
 					lancamentos,
-					total: lancamentos.totalElements
+					total: response['totalElements']
 				};
 				return resultado;
 			});
