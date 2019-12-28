@@ -60,4 +60,16 @@ export class PessoasPesquisaComponent {
 		  .catch(erro => this.errorHandler.handle(erro));
 	}
 
+	alternarStatus(pessoa: any): void {
+
+		const novoStatus = !pessoa.ativo;
+		this.pessoaService.mudarStatus(pessoa.codigo, !pessoa.ativo)
+		.then(() => {
+			const acao = novoStatus ? 'Ativada' : 'Desativada';
+			pessoa.ativo = novoStatus;
+			this.toasty.success(`Pessoa ${acao} com Sucesso!`);
+	  })
+	  .catch(erro => this.errorHandler.handle(erro));
+	}
+
 }
