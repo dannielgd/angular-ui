@@ -50,7 +50,7 @@ export class LancamentosPesquisaComponent implements OnInit {
 			accept: () => {
 				this.excluir(lancamento);
 			},
-			//reject: //trata se o usuário clicar em não
+			// reject: //trata se o usuário clicar em não
 		});
 	}
 
@@ -58,7 +58,7 @@ export class LancamentosPesquisaComponent implements OnInit {
 		this.lancamentoService.excluir(lancamento.codigo)
 		  .then(() => {
 				this.toasty.success('Lançamento Excluído com Sucesso!');
-				this.grid.reset(); //exibe a primeria pagina, resetando a tabela
+				this.grid.reset(); // exibe a primeria pagina, resetando a tabela
 		  })
 		  .catch(erro => this.errorHandler.handle(erro));
 	}

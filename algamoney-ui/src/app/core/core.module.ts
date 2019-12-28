@@ -15,7 +15,7 @@ import { ConfirmationService } from 'primeng/components/common/api';
   imports: [
 	CommonModule,
 
-	ToastyModule.forRoot(), //o forRoot pode ser utilizado aqui porque o coreModule é importado apenas pelo app module, sendo assim parte dele.
+	ToastyModule.forRoot(), // o forRoot pode ser utilizado aqui porque o coreModule é importado apenas pelo app module, sendo assim parte dele.
 	ConfirmDialogModule,
   ],
   exports: [
