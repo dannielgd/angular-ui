@@ -17,7 +17,7 @@ export class LancamentosPesquisaComponent implements OnInit {
 	constructor(private lancamentoService: LancamentoService) { }
 
 	ngOnInit(): void {
-		 //this.pesquisar();
+		 // this.pesquisar();
 	}
 
 	pesquisar(pagina = 0) { /* Padrão de 0 se não passar nada */
