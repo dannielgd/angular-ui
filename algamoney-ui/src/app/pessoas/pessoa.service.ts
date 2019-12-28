@@ -31,12 +31,10 @@ export class PessoaService {
 		return this.http.get(`${this.pessoasUrl}`, { headers, params })
 			.toPromise()
 			.then(response => {
-				console.log(response);
-
 				const pessoas = response['content'];
 				const resultado = {
 					pessoas,
-					total: pessoas['totalElements']
+					total: response['totalElements']
 				};
 				return resultado;
 			});
@@ -48,5 +46,14 @@ export class PessoaService {
 		return this.http.get(`${this.pessoasUrl}`, { headers })
 			.toPromise()
 			.then(response =>  response['content']);
+	}
+
+	excluir(codigo: number): Promise<void> {
+		const headers = new HttpHeaders().append('Authorization', 'Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==');
+
+		return this.http.delete(`${this.pessoasUrl}/${codigo}`, { headers })
+		.toPromise()
+		.then(() => null);
+
 	}
 }
