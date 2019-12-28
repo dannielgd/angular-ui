@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ToastyModule } from 'ng2-toasty';
 
 import { AppComponent } from './app.component';
 
@@ -20,6 +21,8 @@ import { LancamentoService } from './lancamentos/lancamento.service';
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
+
+		ToastyModule.forRoot(),
 
 		LancamentosModule,
 		PessoasModule,
